@@ -51,7 +51,7 @@ def open_dzi_file():
         
         # Launch WebView, loading the HTML file and setting the base URL to the DZI's directory
         webview.create_window(
-            'DZI Viewer by cioran0',
+            'dzOpen by cioran0',
             url=f"file://{html_file_path.replace('\\', '/')}", # Load the HTML file
             width=1000,
             height=800,
@@ -62,7 +62,7 @@ def open_dzi_file():
 
 # Create the main window
 root = tk.Tk()
-root.title("DZI Viewer")
+root.title("dzOpen DZI Viewer")
 root.configure(background='blue')
 
 frame = tk.Frame(
