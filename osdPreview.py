@@ -5,16 +5,13 @@ import os
 
 def open_dzi_file():
     file_path = filedialog.askopenfilename(filetypes=[("DZI files", "*.dzi")])
-    print("filepath ", file_path)
+    
     if file_path:
-        # Create a file URL for the DZI file with forward slashes
-        file_url = f"file://{os.path.abspath(file_path).replace('\\', '/')}"
-        # Print the file path and URL for debugging
-        print(f"Selected file path: {file_path} | File URL: {file_url}")
-        base = os.path.dirname(file_path)
-        relative_path = os.path.basename(file_path)
-        print("Relative PATH ", relative_path)
-        # Create an HTML file to load the DZI file using OpenSeadragon
+        # Get the directory of the DZI file
+        dzi_dir = os.path.dirname(file_path)
+        dzi_filename = os.path.basename(file_path)
+        
+        # Create an HTML content string to load the DZI file using OpenSeadragon
         html_content = f"""
         <!DOCTYPE html>
         <html>
@@ -35,7 +32,7 @@ def open_dzi_file():
                     id: "openseadragon1",
                     prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.0.0/images/",
                     showRotationControl: true,
-                    tileSources: "{relative_path}"
+                    tileSources: "{dzi_filename}"
                 }});
             </script>
             <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -43,21 +40,23 @@ def open_dzi_file():
         </html>
         """
         
-        base_path = os.path.join(base, "dzi_viewer.html")
-        print("ospath...", os.path.dirname(base), "BASE ", base, "os path base and dzi", os.path.join(base, "dzi_viewer.html") )
-        with open(base_path, "w") as html_file:
+        # Save the HTML file in the DZI file's directory
+        html_file_path = os.path.join(dzi_dir, "dzi_viewer.html")
+        print(f"Saving HTML to: {html_file_path}")
+        with open(html_file_path, "w") as html_file:
             html_file.write(html_content)
         
-        # Print the HTML file path for debugging
-        print("Attempting to launch WebView...")
+        # Print the DZI file path and directory for debugging
+        print(f"Selected DZI file path: {file_path} | DZI directory: {dzi_dir}")
+        
+        # Launch WebView, loading the HTML file and setting the base URL to the DZI's directory
         webview.create_window(
             'DZI Viewer',
-            base_path,
+            url=f"file://{html_file_path.replace('\\', '/')}", # Load the HTML file
             width=1000,
             height=800,
             easy_drag=True,
-            resizable=True,
-            # fullscreen=False     # Optional: start in fullscreen
+            resizable=True
             )
         webview.start()
 
