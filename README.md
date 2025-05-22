@@ -6,12 +6,11 @@ Only requirement is python webview, which can be installed ```pip install pywebv
 
 If you want to create dzi's OTOH check [libvips](https://www.libvips.org/) and my gui for that [dzSaver](https://github.com/cioran0/dzSaver).
 
+
+https://github.com/user-attachments/assets/8a03eb00-c10a-4b19-bdbc-18c2192b9019
+
 - Fixed parent directory issue. As far as I know. Will open parent directory of current directory of first dzi now The `webview` is now launched with the `url` pointing directly to this `dzi_viewer.html` file
 - Confirmed working on windows and linux. I don't own a mac.
 - writes an html file to the same directory as the dzi file.
 - for compatibility, and to cut down on add'l path issues, loads OSD and OSD buttons from the source, not local
-
-https://github.com/user-attachments/assets/8a03eb00-c10a-4b19-bdbc-18c2192b9019
-
-
 
