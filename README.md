@@ -12,5 +12,5 @@ If you want to create dzi's OTOH check [libvips](https://www.libvips.org/) and m
 - Confirmed working on windows and linux. I don't own a mac.
 - writes an html file to the same directory as the dzi file.
 - for compatibility, and to cut down on add'l path issues, loads OSD and OSD buttons from the source, not local
-- Added (windows) executable in releases. Unsigned, because a certficate in windows costs $ and this is FOSS, click "More info" -> "Run anyway". Need to build for linux. 
+- Added (windows) executable in releases. Unsigned, because a certificate in windows costs $ and this is FOSS built in my kitchen, click "More info" -> "Run anyway". Need to build for linux. 
 
