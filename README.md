@@ -1,6 +1,6 @@
 # dzOpen
 
-*Windows Binary (.exe) release is [here](https://github.com/cioran0/dzOpen/releases/download/v1.0.0-windows/dzOpen1.0.exe) and Linux is [placeholder]() if you just want to install one file.* 
+*Windows Binary (.exe) release is [here](https://github.com/cioran0/dzOpen/releases/download/v1.0.0-windows/dzOpen1.0.exe) and Linux is [here]() if you just want to install one file.* 
 
 Uses [OpenSeaDragon](https://openseadragon.github.io/), [Tkinter](https://wiki.python.org/moin/TkInter), [Pywebview](https://pywebview.flowrl.com/) to render a [dzi](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc645050(v=vs.95)?redirectedfrom=MSDN) locally. .dzi/tiled image pyramid are used in biomedical imaging, microscopy, professional photography, aerospace/telescopy imaging, art preservation etc. This app is useful if you want to check a dzi quickly but not enough to spin up a server. 
 
