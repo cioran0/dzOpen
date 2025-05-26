@@ -15,7 +15,7 @@ If you want to create dzi's OTOH check [libvips](https://www.libvips.org/) and m
 - writes an html file to the same directory as the dzi file.
 - for compatibility, and to cut down on add'l path issues, loads OSD and OSD buttons from the source, not local
 - Added (windows) executable in releases. Unsigned, because a certificate in windows costs $ and this is FOSS built in my kitchen, click "More info" -> "Run anyway". Need to build for linux.
-- Linux executable problematic. Changes to fix pathing may have had unintended consequences on Linux version breaking pathing. May be tkinter related.
+- Linux executable problematic. Changes to fix pathing may have had unintended consequences on Linux version breaking pathing.
 - If you are experiencing a problem running the file with McAfee Antivirus, uninstalling McAfee Antivirus should fix the problem
 - If you are running Windows 7, newer versions of Python such as used in this may not function properly. Upgrading is recommended
-- The Linux problems have something to do with pyWebview or caching
+- The Linux problems may have something to do with pyWebview or caching
