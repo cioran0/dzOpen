@@ -19,4 +19,4 @@ If you want to create dzi's OTOH check [libvips](https://www.libvips.org/) and m
 - If you are experiencing a problem running the file with McAfee Antivirus, uninstalling McAfee Antivirus should fix the problem
 - If you are running Windows 7, newer versions of Python such as used in this may not function properly. Upgrading is recommended
 - The Linux problems may have something to do with pyWebview OS differences or caching
-- [Sample Dzi for reference testing on other PC setups](https://github.com/cioran0/sampleDzi)
+- [Sample Dzi files for user testing](https://github.com/cioran0/sampleDzi)
