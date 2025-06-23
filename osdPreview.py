@@ -4,7 +4,10 @@ import webview
 import os
 
 def open_dzi_file():
-    file_path = filedialog.askopenfilename(filetypes=[("DZI files", "*.dzi")])
+    file_path = filedialog.askopenfilename(filetypes=[("DZI files", "*.dzi"),
+                                                      ("XML files", "*.xml"),
+                                                      ("All Files", "*.*")
+                                                      ])
     
     if file_path:
         # Get the directory of the DZI file
@@ -51,7 +54,7 @@ def open_dzi_file():
         
         # Launch WebView, loading the HTML file and setting the base URL to the DZI's directory
         webview.create_window(
-            'dzOpen by cioran0',
+            'dzOpen DZI Viewer by cioran0',
             url=f"file://{html_file_path.replace('\\', '/')}", # Load the HTML file
             width=1000,
             height=800,
